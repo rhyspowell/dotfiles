@@ -1,4 +1,5 @@
 <h1 align="center"><code>~/.Dotfiles</code></h1>
+<p align="center">This is not my original work but Lissy93, I would suggest you start with her repo before looking at mine as I am a lot less likely to have documneted any changes that I have made</p>
 <p align="center"><i>My dotfiles for configuring literally everything (automatically!)</i></p>
 <p align="center">
   <a href="https://github.com/lissy93/dotfiles" title="Automate all the things!">
