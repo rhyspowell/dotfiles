@@ -115,7 +115,7 @@ function log_section () {
 echo -e "\n${PRIMARY_COLOR}Starting...${RESET_COLOR}"
 
 # Vzariables for system preferences
-COMPUTER_NAME="AS-AND-MacBook"
+COMPUTER_NAME="rhpowell-mbp"
 HIGHLIGHT_COLOR="0 0.8 0.7"
 
 # Quit System Preferences before starting

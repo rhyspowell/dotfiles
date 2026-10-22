@@ -209,20 +209,20 @@ sudo spctl --master-disable
 ####################################
 log_section "Account Security"
 
-# Enforce system hibernation
-log_msg "Enforce hibernation instead of sleep"
-sudo pmset -a destroyfvkeyonstandby 1
+# # Enforce system hibernation
+# log_msg "Enforce hibernation instead of sleep"
+# sudo pmset -a destroyfvkeyonstandby 1
 
-# Evict FileVault keys from memory
-log_msg "Evict FileVault keys from memory on hibernate"
-sudo pmset -a hibernatemode 25
+# # Evict FileVault keys from memory
+# log_msg "Evict FileVault keys from memory on hibernate"
+# sudo pmset -a hibernatemode 3
 
-# Set power settings (required when evicting FV keys)
-log_msg "Disable power nap and other auto-power settings"
-sudo pmset -a powernap 0
-sudo pmset -a standby 0
-sudo pmset -a standbydelay 0
-sudo pmset -a autopoweroff 0
+# # Set power settings (required when evicting FV keys)
+# log_msg "Disable power nap and other auto-power settings"
+# sudo pmset -a powernap 1
+# sudo pmset -a standby 1
+# sudo pmset -a standbydelay 0
+# sudo pmset -a autopoweroff 0
 
 # Require a password to wake the computer from sleep or screen saver
 log_msg "Require a password to wake the computer from sleep or screen saver"
@@ -267,7 +267,7 @@ log_msg "Disable insecure telnet protocol"
 sudo launchctl disable system/com.apple.telnetd
 
 log_msg "Prevent auto-launching captive portal webpages"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control.plist Active -bool false
+# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control.plist Active -bool false
 
 #########################################
 # Disable Printers and Sharing Protocols #

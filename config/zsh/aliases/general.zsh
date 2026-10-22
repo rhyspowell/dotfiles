@@ -23,7 +23,18 @@ if alias_not_used n; then; alias m='nc'; fi
 if alias_not_used p; then; alias p='pwd'; fi
 if alias_not_used s; then; alias s='sudo'; fi
 if alias_not_used t; then; alias t='touch'; fi
-if alias_not_used v; then; alias v='vim'; fi
+if alias_not_used v; then; alias v='nvim'; fi
+
+# All vi to neovim
+alias vi='nvim'
+alias vim='nvim'
+alias vimdiff='nvim -d'
+alias vimdiffsplit='nvim -d -c "vsplit"'
+alias vimdiffvsplit='nvim -d -c "vsplit"'
+alias vimdiffhsplit='nvim -d -c "split"'
+alias vimdiffsplit='nvim -d -c "split"'
+alias vimdiffvsplit='nvim -d -c "vsplit"'
+alias vimdiffhsplit='nvim -d -c "split"'
 
 # File listing options
 alias lr='ls -R' # List files in sub-directories, recursivley

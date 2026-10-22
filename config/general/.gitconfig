@@ -3,9 +3,9 @@
 # -----------------------------------------------------------------------------
 
 [user]
-    name = Alicia Sykes
-    email = alicia@omg.lol
-    username = lissy93
+    name = Rhys
+    email = rhys@redhat.com
+    username = rhyspowell
 
 [init]
 	defaultBranch = main
@@ -21,11 +21,7 @@
     symlinks = true
 
 [web]
-    browser = firefox
-
-# [instaweb]
-#   httpd = apache2 -f
-# Uncomment and configure if you actually use `git instaweb`
+    browser = chrome
 
 [rerere]
     enabled = 1
@@ -36,7 +32,7 @@
 
 [color "branch"]
     current = yellow bold
-    local = purple bold
+    local = magenta bold
     remote = cyan bold
 
 [color "diff"]

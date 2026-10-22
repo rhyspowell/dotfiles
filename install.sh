@@ -30,7 +30,7 @@ START_TIME=`date +%s` # Start timer
 SRC_DIR=$(dirname ${0})
 
 # Dotfiles Source Repo and Destination Directory
-REPO_NAME="${REPO_NAME:-Lissy93/Dotfiles}"
+REPO_NAME="${REPO_NAME:-rhyspowell/dotfiles}"
 DOTFILES_DIR="${DOTFILES_DIR:-${SRC_DIR:-$HOME/.dotfiles}}"
 DOTFILES_REPO="${DOTFILES_REPO:-https://github.com/${REPO_NAME}.git}"
 
@@ -79,7 +79,7 @@ make_intro () {
   C2="\033[0;35m"
   C3="\x1b[2m"
   echo -e "${CYAN_B}The seup script will do the following:${RESET}\n"\
-  "${C2}(1) Pre-Setup Tasls\n"\
+  "${C2}(1) Pre-Setup Tasks\n"\
   "  ${C3}- Check that all requirements are met, and system is compatible\n"\
   "  ${C3}- Sets environmental variables from params, or uses sensible defaults\n"\
   "  ${C3}- Output welcome message and summary of changes\n"\
@@ -267,6 +267,8 @@ function apply_preferences () {
   if [[ $ans_cliplugins =~ ^[Yy]$ ]] || [[ $AUTO_YES = true ]] ; then
     # Install / update vim plugins with Plug
     echo -e "\n${PURPLE}Installing Vim Plugins${RESET}"
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     vim +PlugInstall +qall
 
     # Install / update Tmux plugins with TPM
@@ -318,7 +320,7 @@ function intall_macos_packages () {
     echo -e "\n${PURPLE}Updating homebrew and packages...${RESET}"
     brew update # Update Brew to latest version
     brew upgrade # Upgrade all installed casks
-    brew bundle --global --file $HOME/.Brewfile # Install all listed Brew apps
+    brew bundle install --file $HOME/.Brewfile # Install all listed Brew apps
     brew cleanup # Remove stale lock files and outdated downloads
     killall Finder # Restart finder (required for some apps)
   else

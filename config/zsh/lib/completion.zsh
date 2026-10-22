@@ -41,7 +41,7 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' \
     hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
 # Initialize and optimize completion
-autoload -Uz compinit
+autoload -Uz compinit && compinit
 
 # Enable extended globbing.
 setopt extendedglob

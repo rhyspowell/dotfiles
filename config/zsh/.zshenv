@@ -10,9 +10,9 @@ export XDG_LIB_HOME="${HOME}/.local/lib"
 export XDG_CACHE_HOME="${HOME}/.cache"
 
 # Set default applications
-export EDITOR="vim"
+export EDITOR="vi"
 export TERMINAL="konsole"
-export BROWSER="firefox"
+export BROWSER="chrome"
 export PAGER="less"
 
 ## Respect XDG directories

@@ -16,12 +16,12 @@ else
 endif
 
 " If vim-plug not present, install it now
-if !filereadable(expand(vim_plug_location))
-  echom "Vim Plug not found, downloading to '" . vim_plug_location . "'"
-  execute '!curl -o ' . vim_plug_location . ' --create-dirs' .
-  \ ' https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  echom "Next, run :PlugInstall to install all plugins"
-endif
+"if !filereadable(expand(vim_plug_location))
+"  echo "Vim Plug not found, downloading to '" . vim_plug_location . "'"
+"  execute '!curl -o ' . vim_plug_location . ' --create-dirs' .
+"  \ ' https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+"  echom "Next, run :PlugInstall to install all plugins"
+"endif
 
 " If Plugins directory not yet exist, create it
 if empty(vim_plug_plugins_dir)
