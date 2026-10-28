@@ -151,6 +151,8 @@ else
   alias c='clear'
 fi
 
+alias python='python3'
+
 # Command line head / tail shortcuts
 alias -g H='| head' # Pipes output to head (the first part of a file)
 alias -g T='| tail' # Pipes output to tail (the last part of a file)
@@ -210,5 +212,5 @@ alias dog='cat'
 alias gtfo='exit'
 
 # Alias for install script
-alias dotfiles="${DOTFILES_DIR:-$HOME/Documents/config/dotfiles}/install.sh"
+alias dotfiles="${DOTFILES_DIR:-$HOME/dotfiles}/install.sh"
 alias dots="dotfiles"
